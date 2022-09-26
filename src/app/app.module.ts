@@ -1,16 +1,26 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DoctorsListComponent } from './components/doctors/doctors-list/doctors-list.component';
+import { AddDoctorComponent } from './components/doctors/add-doctor/add-doctor.component';
+import { FormsModule } from '@angular/forms';
+import { EditDoctorComponent } from './components/doctors/edit-doctor/edit-doctor.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DoctorsListComponent,
+    AddDoctorComponent,
+    EditDoctorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
